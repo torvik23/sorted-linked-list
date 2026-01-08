@@ -1,0 +1,18 @@
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - vendor
+    scanFiles:
+        - vendor/autoload.php
+    tmpDir: ./build/cache/phpstan
+    treatPhpDocTypesAsCertain: false
+    checkMissingTypehints: true
+    reportUnmatchedIgnoredErrors: true
+    ignoreErrors:
+        -
+            message: '#expects .*, .* given#'
+            paths:
+                - tests/*
